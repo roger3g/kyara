@@ -34,8 +34,7 @@ Este projeto está em sua versão beta, em desenvolvimento.
 
 ## :arrow_down: Instalação
 
-- `npm install -g kyara`;
-- `yarn global add kyara`;
+- `npm install -g kyara` ou `yarn global add kyara`;
 
 ## Comandos
 `kyara --version or kyara -v`: Mostra a versão da CLI. <br>
