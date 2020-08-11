@@ -39,7 +39,7 @@ Este projeto está em sua versão beta, em desenvolvimento.
 ## :sos: Comandos
 `kyara --version or kyara -v`: Mostra a versão da CLI. <br>
 `kyara --help or kyara -h`: Exibe a ajuda.<br>
-`kyara create-chrome-extensions [path] [name] or kyara ce [path] [name]`: Cria uma base para extnções para o chrome.<br>
+`kyara create-chrome-extensions [path] [name] or kyara ce [path] [name]`: Cria uma base para extenções para o chrome.<br>
 `kyara create-node-app [path] [name] or kyara n [path] [name]`: Cria uma estrutura de diretório para app feitos com node.Js.<br>
 `kyara dir`: Exibe o diretório atual.<br>
 `kyara os`: Exibe informações do sistema operacinal.<br>
