@@ -4,33 +4,6 @@ const path = require( 'path' )
 const { mkdir , writeFile } = fs
 const { join } = path
 
-const command = {
-  name: 'kyara create-chrome-extensions [path] [nome]',
-  alias: ['ce'],
-  description: 'Cria a base de arquivos para extençõs do chrome',
-  run: async toolbox => {
-    const { print , parameters } = toolbox
-    
-    const folder = parameters.first
-    const projectName = parameters.second
-    const finalPath = join( `${folder}` , `/${projectName}` )
-
-    if ( folder == undefined || projectName == undefined) {
-      print.error( 'Error, application name or path has not been defined.' )
-      return
-    } else {
-
-      await mkdir( finalPath , () => { return } )
-
-      await writeFile( join( `${finalPath}` , 'content.js' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , 'style.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , 'manifest.json' ) , manifestData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-    }
-
-  }
-}
-
 const manifestData = `{
   "manifest_version": 2, // versão do manifesto (normalmente 2)
   "name": "Nome",        // nome da nossa extenção
@@ -58,5 +31,32 @@ const manifestData = `{
     }
   ]
 }`
+
+const command = {
+  name: 'create-chrome-extensions',
+  alias: ['cce'],
+  description: 'Cria uma estrutura base de aqruivos para extenções chrome',
+  run: async toolbox => {
+    const { print , parameters } = toolbox
+    
+    const folder = parameters.first
+    const projectName = parameters.second
+    const finalPath = join( `${folder}` , `/${projectName}` )
+
+    if ( folder == undefined || projectName == undefined) {
+      print.error( 'Erro, nome ou caminho não foi definido.' )
+      return
+    } else {
+
+      await mkdir( finalPath , () => { return } )
+
+      await writeFile( join( `${finalPath}` , 'content.js' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+      await writeFile( join( `${finalPath}` , 'style.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+      await writeFile( join( `${finalPath}` , 'manifest.json' ) , manifestData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+    }
+
+  }
+}
 
 module.exports = command

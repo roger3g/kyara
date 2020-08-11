@@ -1,6 +1,5 @@
 const command = {
-  name: 'kyara dir',
-  alias: ['d'],
+  name: 'dir',
   description: 'Exibe o diretório atual',
   run: async toolbox => {
     const { print } = toolbox

@@ -32,7 +32,8 @@ Este projeto está em sua versão beta, em desenvolvimento.
 Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina.
 
 ## :sos: Comandos
-Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`.
+Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`. <br>
+Lista de comandos detalhada [aqui](docs/commands.md)
 
 ## :thinking: Como contribuir
 

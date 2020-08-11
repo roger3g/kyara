@@ -4,69 +4,6 @@ const path = require( 'path' )
 const { mkdir , writeFile } = fs
 const { join } = path
 
-const command = {
-  name: 'kyara create-node-app [path] [nome]',
-  alias: ['n'],
-  description: 'Cria a base de aquivos para apps com node e express',
-  run: async toolbox => {
-    const { print , parameters } = toolbox
-    
-    const folder = parameters.first
-    const projectName = parameters.second
-    const finalPath = join( `${folder}` , `/${projectName}` )
-
-    if ( folder == undefined || projectName == undefined) {
-      print.error( 'Error, application name or path has not been defined.' )
-      return
-    } else {
-      
-      // root
-      await mkdir( finalPath , () => { return } )
-
-      // public
-      await mkdir( join( `${finalPath}` , 'public' ) , () => { return } )
-      
-      await mkdir( join( `${finalPath}/public` , 'assets' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/assets` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/public` , 'pages' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/pages` , '404-error.html' ) , page404Data , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/public` , 'scripts' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/scripts` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/public` , 'styles' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/styles` , 'main.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}/public/styles` , 'responsive.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}/public` , 'index.html' ) , indexHtmlData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      // src
-      await mkdir( join( `${finalPath}` , 'src' ) , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'config' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/config` , 'index.js' ) , indexConfigData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'controllers' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/controllers` , 'index.js' ) , indexControllersData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'database' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/database` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'routes' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/routes` , 'routes.js' ) , routesData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}/src` , 'app.js' ) , appJsData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}/src` , 'server.js' ) , serverJsdata , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}` , '.env' ) , 'PORT = 80' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , '.gitignore' ) , 'node_modules/' , { enconding: 'utf-8', flag: 'w' } , () => { return } )      
-      await writeFile( join( `${finalPath}` , 'package.json' ) , packageJsonData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-    } 
-  }
-}
-
 const packageJsonData = `{
   "name": "",
   "version": "1.0.0",
@@ -214,5 +151,70 @@ router.get( '/' , pageHome )
 router.get( '*' , page404 )
 
 module.exports = router`
+
+const command = {
+  name: 'create-node-app',
+  alias: ['cna'],
+  description: 'Cria a base de aquivos para apps com node e express',
+  run: async toolbox => {
+    const { print , parameters } = toolbox
+    
+    const folder = parameters.first
+    const projectName = parameters.second
+    const finalPath = join( `${folder}` , `/${projectName}` )
+
+    if ( folder == undefined || projectName == undefined) {
+      print.error( 'Erro, nome ou caminho não foi definido' )
+      return
+    } else {
+      
+      // root
+      await mkdir( finalPath , () => { return } )
+
+      // public
+      await mkdir( join( `${finalPath}` , 'public' ) , () => { return } )
+      
+      await mkdir( join( `${finalPath}/public` , 'assets' ) , () => { return } )
+      await writeFile( join( `${finalPath}/public/assets` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/public` , 'pages' ) , () => { return } )
+      await writeFile( join( `${finalPath}/public/pages` , '404-error.html' ) , page404Data , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/public` , 'scripts' ) , () => { return } )
+      await writeFile( join( `${finalPath}/public/scripts` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/public` , 'styles' ) , () => { return } )
+      await writeFile( join( `${finalPath}/public/styles` , 'main.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+      await writeFile( join( `${finalPath}/public/styles` , 'responsive.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await writeFile( join( `${finalPath}/public` , 'index.html' ) , indexHtmlData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      // src
+      await mkdir( join( `${finalPath}` , 'src' ) , () => { return } )
+
+      await mkdir( join( `${finalPath}/src` , 'config' ) , () => { return } )
+      await writeFile( join( `${finalPath}/src/config` , 'index.js' ) , indexConfigData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/src` , 'controllers' ) , () => { return } )
+      await writeFile( join( `${finalPath}/src/controllers` , 'index.js' ) , indexControllersData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/src` , 'database' ) , () => { return } )
+      await writeFile( join( `${finalPath}/src/database` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await mkdir( join( `${finalPath}/src` , 'routes' ) , () => { return } )
+      await writeFile( join( `${finalPath}/src/routes` , 'routes.js' ) , routesData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await writeFile( join( `${finalPath}/src` , 'app.js' ) , appJsData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+      await writeFile( join( `${finalPath}/src` , 'server.js' ) , serverJsdata , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      await writeFile( join( `${finalPath}` , '.env' ) , 'PORT = 80' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+      await writeFile( join( `${finalPath}` , '.gitignore' ) , 'node_modules/' , { enconding: 'utf-8', flag: 'w' } , () => { return } )      
+      await writeFile( join( `${finalPath}` , 'package.json' ) , packageJsonData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+
+      print.success( 'pronto' )
+
+    } 
+  }
+}
 
 module.exports = command
