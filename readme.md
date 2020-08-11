@@ -36,7 +36,7 @@ Este projeto está em sua versão beta, em desenvolvimento.
 
 - `npm install -g kyara` ou `yarn global add kyara`;
 
-## Comandos
+## :sos: Comandos
 `kyara --version or kyara -v`: Mostra a versão da CLI. <br>
 `kyara --help or kyara -h`: Exibe a ajuda.<br>
 `kyara create-chrome-extensions [path] [name] or kyara ce [path] [name]`: Cria uma base para extnções para o chrome.<br>
