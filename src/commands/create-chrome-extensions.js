@@ -5,9 +5,9 @@ const { mkdir , writeFile } = fs
 const { join } = path
 
 const command = {
-  name: 'create-chrome-extensions [path] [name]',
+  name: 'kyara create-chrome-extensions [path] [nome]',
   alias: ['ce'],
-  description: 'Create a extensions for chrome',
+  description: 'Cria a base de arquivos para extençõs do chrome',
   run: async toolbox => {
     const { print , parameters } = toolbox
     

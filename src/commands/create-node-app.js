@@ -5,9 +5,9 @@ const { mkdir , writeFile } = fs
 const { join } = path
 
 const command = {
-  name: 'create-node-app [path] [name]',
+  name: 'kyara create-node-app [path] [nome]',
   alias: ['n'],
-  description: 'Create a node application',
+  description: 'Cria a base de aquivos para apps com node e express',
   run: async toolbox => {
     const { print , parameters } = toolbox
     

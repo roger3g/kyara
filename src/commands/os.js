@@ -2,8 +2,8 @@ const os = require( 'os' )
 const { freemem , totalmem , arch , endianness , platform , type , uptime , version , hostname } = os
 
 const command = {
-  name: 'os',
-  description: 'Show system information',
+  name: 'kyara os',
+  description: 'Exibe informações do systema operacional',
   run: async toolbox => {
     setInterval( infoOs , 500 )
   }

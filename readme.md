@@ -1,10 +1,4 @@
-<h1 align="center">
-  CLI kyara
-</h1>
-
-<h1 align="center">
-  <img alt="Ícone do projeto" title="icon" src=".github/code.svg" width="100px" />
-</h1>
+<h1 align="center">CLI kyara</h1>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
@@ -12,8 +6,7 @@
 
 ## :gear: Requisítos
 
-- [ ] [Node.js](https://nodejs.org/en/) ( Obrigatório )
-- [ ] [GIT](https://git-scm.com/) ( Opcional )
+- [ ] [Node.js](https://nodejs.org/en/)
 
 ## :rocket: Tecnologias
 
@@ -22,7 +15,7 @@
 
 ## :computer: Projeto
 
-kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia dia.
+kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia a dia.
 
 ## :checkered_flag: Updates
 
@@ -30,19 +23,16 @@ Este projeto está em sua versão beta, em desenvolvimento.
 
 ## :bookmark_tabs: Ideias de implementação
 
-- [ ] Novos comandos
+- [ ] Adicionar nsovos comandos.
+- [ ] Refatorar os comandos já existentes.
 
 ## :arrow_down: Instalação
 
-- `npm install -g kyara` ou `yarn global add kyara`;
+- `npm install -g kyara` ou `yarn global add kyara`; <br>
+Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina.
 
 ## :sos: Comandos
-`kyara --version or kyara -v`: Mostra a versão da CLI. <br>
-`kyara --help or kyara -h`: Exibe a ajuda.<br>
-`kyara create-chrome-extensions [path] [name] or kyara ce [path] [name]`: Cria uma base para extenções para o chrome.<br>
-`kyara create-node-app [path] [name] or kyara n [path] [name]`: Cria uma estrutura de diretório para app feitos com node.Js.<br>
-`kyara dir`: Exibe o diretório atual.<br>
-`kyara os`: Exibe informações do sistema operacinal.<br>
+Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`.
 
 ## :thinking: Como contribuir
 
