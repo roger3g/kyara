@@ -33,7 +33,7 @@ Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar 
 
 ## :sos: Comandos
 Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`. <br>
-Lista de comandos detalhada [aqui](docs/commands.md)
+Lista de comandos detalhada [aqui](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md)
 
 ## :thinking: Como contribuir
 
