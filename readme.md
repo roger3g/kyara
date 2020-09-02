@@ -1,12 +1,9 @@
 <h1 align="center">CLI kyara</h1>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=5568f9&labelColor=111116">
-</p>
-
 ## :gear: Requisítos
 
-- [ ] [Node.js](https://nodejs.org/en/)
+- [ ] [Node.js](https://nodejs.org/en/) ( obrigatório )
+- [ ] [npm](https://www.npmjs.com/) ( opcional )
 
 ## :rocket: Tecnologias
 
@@ -15,7 +12,7 @@
 
 ## :computer: Projeto
 
-kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia a dia.
+kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia a dia como desenvolvedor.
 
 ## :checkered_flag: Updates
 
@@ -23,13 +20,13 @@ Este projeto está em sua versão beta, em desenvolvimento.
 
 ## :bookmark_tabs: Ideias de implementação
 
-- [ ] Adicionar nsovos comandos.
+- [ ] Adicionar novos comandos.
 - [ ] Refatorar os comandos já existentes.
 
 ## :arrow_down: Instalação
 
 - `npm install -g kyara` ou `yarn global add kyara`; <br>
-Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina.
+Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina e o gluegun não da suporte a instalações para pastas específicas.
 
 ## :sos: Comandos
 Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`. <br>
@@ -47,4 +44,3 @@ Depois que o merge da sua pull request for feito, você pode deletar a sua branc
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-

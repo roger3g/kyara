@@ -1,5 +1,5 @@
 module.exports = toolbox => {
   toolbox.foo = () => {
-    toolbox.print.info('called foo extension')
+    toolbox.print.info( 'called foo extension' )
   }
 }

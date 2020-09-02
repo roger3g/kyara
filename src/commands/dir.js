@@ -1,10 +1,8 @@
-const command = {
+module.exports = {
   name: 'dir',
-  description: 'Exibe o diretório atual',
+  description: 'Shows the current directory',
   run: async toolbox => {
     const { print } = toolbox
-    print.info( __dirname )
+    print.success( process.cwd() )
   }
 }
-
-module.exports = command

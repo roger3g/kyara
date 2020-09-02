@@ -4,10 +4,40 @@ const path = require( 'path' )
 const { mkdir , writeFile } = fs
 const { join } = path
 
+module.exports = {
+  name: 'create-chrome-extensions',
+  alias: ['cce'],
+  description: 'Create a base file structure for chrome extensions',
+  run: async toolbox => {
+    const { print , parameters } = toolbox
+    
+    const projectName = parameters.first
+    const path = join( process.cwd() , `/${projectName}` )
+
+    if ( projectName == undefined ) {
+      print.error( 'Error, name has not been defined' )
+      return 
+    } else {
+      mkdir( path , () => { return } )
+      writeFileData ( path , 'content.js' , '' )
+      writeFileData ( path , 'style.css' , '' )
+      writeFileData ( path , 'manifest.json' , manifestData )
+      return
+    }
+  }
+}
+
+function writeFileData ( path , file , data ) {
+  writeFile( join( `${path}` , file ) , 
+  data , { enconding: 'utf-8', flag: 'w' } , () => {
+    return
+  } )
+}
+
 const manifestData = `{
   "manifest_version": 2, // versão do manifesto (normalmente 2)
   "name": "Nome",        // nome da nossa extenção
-  "version": "0.0.1",      // versão da nossa extenção
+  "version": "0.0.1",    // versão da nossa extenção
   "content_scripts": [
     {
       "matches": [
@@ -31,32 +61,3 @@ const manifestData = `{
     }
   ]
 }`
-
-const command = {
-  name: 'create-chrome-extensions',
-  alias: ['cce'],
-  description: 'Cria uma estrutura base de aqruivos para extenções chrome',
-  run: async toolbox => {
-    const { print , parameters } = toolbox
-    
-    const folder = parameters.first
-    const projectName = parameters.second
-    const finalPath = join( `${folder}` , `/${projectName}` )
-
-    if ( folder == undefined || projectName == undefined) {
-      print.error( 'Erro, nome ou caminho não foi definido.' )
-      return
-    } else {
-
-      await mkdir( finalPath , () => { return } )
-
-      await writeFile( join( `${finalPath}` , 'content.js' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , 'style.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , 'manifest.json' ) , manifestData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-    }
-
-  }
-}
-
-module.exports = command

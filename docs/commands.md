@@ -1,29 +1,45 @@
 # Comandos kyara
 
-### Você pode criar uma estrutura base para app node com o seguinte comando:
-`kyara create-node-app [path] [nome]` ou `kyara cna [path] [nome]` <br>
+## Você pode consultar os comandos digitando:
+`kyara -h` ou `kyara --help`
 
-#### Onde:
-`[path]` é o caminho a partir da raiz, se você informar um path que não existe os arquivos não serão criados. <br>
-`[nome]` é o nome do projeto. <br>
+## Você pode consultar a versão da cli digitando:
+`kyara -v` ou `kyara --version`
 
-#### Exemplo de uso
+## Você pode criar uma estrutura base para app node digitando:
+`kyara create-node-app [nome]` ou `kyara cna [nome]`
 
-`kyara cna C:\Users\Roger\Downloads proffy` <br>
+### Onde:
+`[nome]` é o nome do projeto.
 
-### Você pode criar uma estrutura base de aqruivos para extenções chrome com o seguinte comando:
-`kyara create-chrome-extensions [path] [nome]` ou `kyara cce [path] [nome]` <br>
+## Você pode criar uma estrutura base de aqruivos para extenções chrome digitando:
+`kyara create-chrome-extensions [nome]` ou `kyara cce [nome]`
 
-#### Onde:
-`[path]` é o caminho a partir da raiz, se você informar um path que não existe os arquivos não serão criados. <br>
-`[nome]` é o nome do projeto. <br>
+### Onde:
+`[nome]` é o nome do projeto.
 
-#### Exemplo de uso
-
-`kyara cce C:\Users\Roger\Downloads speed-audio` <br>
-
-### Para saber o diretório atual basta digitar:
+## Para saber o diretório atual basta digitar:
 `kyara dir`
 
-### Você pode obter algumas informações do seu sistema operacional digitando:
+## Você pode obter algumas informações do seu sistema operacional digitando:
 `kyara os`
+
+## Você pode obter status da mémoria do seu sistema operacional digitando:
+`kyara memory` ou  `kyara m`
+
+## Você pode instalar pacotes do npm digitando:
+`kyara add [pacote]`
+
+## Você pode remover pacotes do npm digitando:
+`kyara remove [pacote]`
+
+## Você pode encriptar arquivos digitando:
+`kyara encrypt-files [arquivo]` ou `kyara ef [arquivo]` <br>
+
+**Obs**: Os arquivos criptografados NÃO serão descriptografados.
+
+## Você pode criar arquivos digitando:
+`kyara generate [nome_arquivo]` ou `kyara g [nome_arquivo]`
+
+## Você pode visualizar o conteúdo de arquivos digitando:
+`kyara view [nome_arquivo]`

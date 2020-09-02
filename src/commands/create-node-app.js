@@ -1,8 +1,85 @@
-const fs = require( 'fs' )
+const fs = require( 'fs' ) 
 const path = require( 'path' )
 
 const { mkdir , writeFile } = fs
 const { join } = path
+
+module.exports = {
+  name: 'create-node-app',
+  alias: ['cna'],
+  description: 'Creates the file base for apps with node and express',
+  run: async toolbox => {
+    const { print , parameters } = toolbox
+
+    const projectName = parameters.first
+    const path = join( process.cwd() , `/${projectName}` )
+    
+    if ( projectName == undefined) {
+      print.error( 'Error, name or has not been defined' )
+      return
+    } else {
+
+      // root
+      mkdir( path , () => { return } )
+
+      // public
+      mkdir( join( `${path}` , 'public' ) , () => { return } )
+      
+      mkdir( join( `${path}/public` , 'assets' ) , () => { return } )
+      writeFileData( `${path}/public/assets` , '.gitkeep' , '' )
+
+      mkdir( join( `${path}/public` , 'pages' ) , () => { return } )
+      writeFileData( `${path}/public/pages` , '404-error.html' , page404Data )
+
+      mkdir( join( `${path}/public` , 'scripts' ) , () => { return } )
+      writeFileData( `${path}/public/scripts` , '.gitkeep' , '' )
+
+      mkdir( join( `${path}/public` , 'styles' ) , () => { return } )
+      writeFileData( `${path}/public/styles` , 'main.css' , '' )
+      writeFileData( `${path}/public/styles` , 'responsive.css' , '' )
+
+      writeFileData( `${path}/public` , 'index.html' , indexHtmlData )
+
+      // src
+      mkdir( join( `${path}` , 'src' ) , () => { return } )
+
+      mkdir( join( `${path}/src` , 'config' ) , () => { return } )
+      writeFileData( `${path}/src/config` , 'index.js' , indexConfigData )
+
+      mkdir( join( `${path}/src` , 'controllers' ) , () => { return } )
+      writeFileData( `${path}/src/controllers` , 'index.js' , indexControllersData )
+
+      mkdir( join( `${path}/src` , 'database' ) , () => { return } )
+      writeFileData(  `${path}/src/database` , '.gitkeep' , '' )
+
+      mkdir( join( `${path}/src` , 'routes' ) , () => { return } )
+      writeFileData( `${path}/src/routes` , 'routes.js' , routesData )
+
+      writeFileData( `${path}/src` , 'app.js' , appJsData )
+      writeFileData( `${path}/src` , 'server.js' , serverJsdata )
+
+      writeFileData( `${path}` , '.env' , 'PORT = 80' )
+      writeFileData( `${path}` , '.gitignore' , 'node_modules' )      
+      writeFileData( `${path}` , 'package.json' , packageJsonData )
+      writeFileData( `${path}` , 'README.md' , '' )
+      writeFileData( `${path}` , 'LICENSE.md' , LicenseData )
+
+      mkdir( join( `${path}` , '.github' ) , () => { return } )
+      writeFileData(  `${path}/.github` , '.gitkeep' , '' )
+
+      print.success( 'Done' )
+      return
+
+    } 
+  }
+}
+
+function writeFileData ( path , file , data ) {
+  writeFile( join( `${path}` , file ) , 
+    data , { enconding: 'utf-8', flag: 'w' } , () => {
+      return
+    } )
+}
 
 const packageJsonData = `{
   "name": "",
@@ -32,59 +109,58 @@ const packageJsonData = `{
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
-}`
+}
+`
 
 const page404Data = `<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="">
-    <meta name="description" content="">
-    <meta name="copyright" content="">
-    <meta name="keywords" content="">
-    <meta name="robot" content="index">
-    <meta name="generator" content="">
-    <meta name="author" content="">
-    <title>Página não encontrada</title>
-    
-    <link rel="stylesheet" href="">
-    <script src="" type="text/javascript"></script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="">
+<meta name="description" content="">
+<meta name="copyright" content="">
+<meta name="keywords" content="">
+<meta name="robot" content="index">
+<meta name="generator" content="">
+<meta name="author" content="">
+<title>Página não encontrada</title>
 
-  </head>
-  <body>
+<link rel="stylesheet" href="/../styles/main.css">
+<link rel="stylesheet" href="/../styles/responsive.css">
 
-    <h1>404</h1>
-    <h2>Página não encontrada</h2>
+</head>
+<body>
 
-  </body>
+<h1>404</h1>
+<h2>Página não encontrada</h2>
+
+</body>
 </html>`
 
 const indexHtmlData = `<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="">
-    <meta name="description" content="">
-    <meta name="copyright" content="">
-    <meta name="keywords" content="">
-    <meta name="robot" content="index">
-    <meta name="generator" content="">
-    <meta name="author" content="">
-    <title>Home</title>
-    
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/responsive.css">
-    
-    <script src="" type="text/javascript"></script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="">
+<meta name="description" content="">
+<meta name="copyright" content="">
+<meta name="keywords" content="">
+<meta name="robot" content="index">
+<meta name="generator" content="">
+<meta name="author" content="">
+<title>Home</title>
 
-  </head>
-  <body>
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/responsive.css">
 
-    <h1>Welcome to your server!</h1>
+</head>
+<body>
 
-  </body>
+<h1>Welcome to your server!</h1>
+
+</body>
 </html>`
 
 const appJsData = `const nunjucks = require( 'nunjucks' )
@@ -94,7 +170,6 @@ const routes = require( './routes/routes.js' )
 
 const express = require( 'express' )
 const app = express()
-
 
 // Configurar nunjucks
 nunjucks.configure( path.join( __dirname , '/../public/pages' ) , { 
@@ -122,7 +197,7 @@ app.listen( PORT , ( err ) => {
   if ( err ) {
     console.log( 'erro' )
   }
-  console.log( 'Server running on localhost:80 or 3000' ) // Troque por uma Template Literals com a constante PORT
+  console.log( 'Server running on localhost:' + PORT )
 } )`
 
 const indexConfigData = `module.exports = {
@@ -131,90 +206,45 @@ const indexConfigData = `module.exports = {
   }
 }`
 
-const indexControllersData = `const controllers = {
+const indexControllersData = `const controller = {
   pageHome( req, res ) {
     res.render( 'index.html' )
   },
-  page404( req, res ) {
-    res.render( '404-error.html' )
+  page404( req, res ) { // Esta rota deve sempre ser a última!
+    res.render( '404-error.html' ) 
   }
 }
 
-module.exports = controllers`
+module.exports = controller`
 
 const routesData = `const router = require('express').Router()
-const controllers = require('./../controllers/index.js')
+const controller = require('./../controllers/index.js')
 
-const { pageHome , page404 } = controllers
+const { pageHome , page404 } = controller
 
 router.get( '/' , pageHome )
-router.get( '*' , page404 )
+router.get( '*' , page404 ) // Esta rota deve sempre ser a última!
 
 module.exports = router`
 
-const command = {
-  name: 'create-node-app',
-  alias: ['cna'],
-  description: 'Cria a base de aquivos para apps com node e express',
-  run: async toolbox => {
-    const { print , parameters } = toolbox
-    
-    const folder = parameters.first
-    const projectName = parameters.second
-    const finalPath = join( `${folder}` , `/${projectName}` )
+const LicenseData = `The MIT License (MIT)
 
-    if ( folder == undefined || projectName == undefined) {
-      print.error( 'Erro, nome ou caminho não foi definido' )
-      return
-    } else {
-      
-      // root
-      await mkdir( finalPath , () => { return } )
+Copyright (c) 2020 [Autor]
 
-      // public
-      await mkdir( join( `${finalPath}` , 'public' ) , () => { return } )
-      
-      await mkdir( join( `${finalPath}/public` , 'assets' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/assets` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-      await mkdir( join( `${finalPath}/public` , 'pages' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/pages` , '404-error.html' ) , page404Data , { enconding: 'utf-8', flag: 'w' } , () => { return } )
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-      await mkdir( join( `${finalPath}/public` , 'scripts' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/scripts` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/public` , 'styles' ) , () => { return } )
-      await writeFile( join( `${finalPath}/public/styles` , 'main.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}/public/styles` , 'responsive.css' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}/public` , 'index.html' ) , indexHtmlData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      // src
-      await mkdir( join( `${finalPath}` , 'src' ) , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'config' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/config` , 'index.js' ) , indexConfigData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'controllers' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/controllers` , 'index.js' ) , indexControllersData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'database' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/database` , '.gitkeep' ) , '' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await mkdir( join( `${finalPath}/src` , 'routes' ) , () => { return } )
-      await writeFile( join( `${finalPath}/src/routes` , 'routes.js' ) , routesData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}/src` , 'app.js' ) , appJsData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}/src` , 'server.js' ) , serverJsdata , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      await writeFile( join( `${finalPath}` , '.env' ) , 'PORT = 80' , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-      await writeFile( join( `${finalPath}` , '.gitignore' ) , 'node_modules/' , { enconding: 'utf-8', flag: 'w' } , () => { return } )      
-      await writeFile( join( `${finalPath}` , 'package.json' ) , packageJsonData , { enconding: 'utf-8', flag: 'w' } , () => { return } )
-
-      print.success( 'pronto' )
-
-    } 
-  }
-}
-
-module.exports = command
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.`
