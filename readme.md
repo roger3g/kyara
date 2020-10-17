@@ -14,10 +14,6 @@
 
 kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia a dia como desenvolvedor.
 
-## :checkered_flag: Updates
-
-Este projeto está em sua versão beta, em desenvolvimento.
-
 ## :bookmark_tabs: Ideias de implementação
 
 - [ ] Adicionar novos comandos.
@@ -26,7 +22,7 @@ Este projeto está em sua versão beta, em desenvolvimento.
 ## :arrow_down: Instalação
 
 - `npm install -g kyara` ou `yarn global add kyara`; <br>
-Obs: Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina e o gluegun não da suporte a instalações para pastas específicas.
+**Obs:** Eu recomendo que você instale de forma GLOBAL, assim você vai poder usar em qualquer lugar da sua máquina e o gluegun não da suporte a instalações para pastas específicas.
 
 ## :sos: Comandos
 Para consultar a lista de comandos basta digitar `kyara -h` ou `kyara --help`. <br>
