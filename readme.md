@@ -3,7 +3,7 @@
 
 ## Requirements
 
-- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
 ## Technology
 
