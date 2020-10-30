@@ -1,9 +1,10 @@
 # CLI kyara 
 <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
+<img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue">
 
 ## Requisítos
 
-- [ ] [npm](https://www.npmjs.com/)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
 ## Tecnologias
 
