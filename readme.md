@@ -39,6 +39,6 @@ Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/doc
 
 After the merge of your pull request is done, you can delete your branch.
 
-## Licença
+## License
 
 This project is under the MIT license. See the archive [LICENSE](LICENSE) for more details.
