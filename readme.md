@@ -1,6 +1,10 @@
 # CLI kyara 
 <img alt="License" src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue">
 
+<div align="center">
+  <img src=".github/print.png" alt="Print" style="width: 100%;">  
+</div>
+
 ## Requirements
 
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
