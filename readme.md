@@ -41,4 +41,4 @@ After the merge of your pull request is done, you can delete your branch.
 
 ## Licença
 
-This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
+This project is under the MIT license. See the archive [LICENSE](LICENSE) for more details.
