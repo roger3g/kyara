@@ -1,45 +1,27 @@
-# Comandos kyara
+# Kyara commands
 
-## Você pode consultar os comandos digitando:
-`kyara -h` ou `kyara --help`
+- You can query the commands by typing: **`kyara -h`** or **`kyara --help`**
 
-## Você pode consultar a versão da cli digitando:
-`kyara -v` ou `kyara --version`
+- You can consult the version of the cli by typing: **`kyara -v`** or **`kyara --version`**
 
-## Você pode criar uma estrutura base para app node digitando:
-`kyara create-node-app [nome]` ou `kyara cna [nome]`
+- You can create a base structure for app node by typing: **`kyara create-node-app [project-name]`** or **`kyara cna [project-name]`**
 
-### Onde:
-`[nome]` é o nome do projeto.
+- You can create a base file structure for chrome extensions by typing: **`kyara create-chrome-extensions [project-name]`** or **`kyara cce [project-name]`**
 
-## Você pode criar uma estrutura base de aqruivos para extenções chrome digitando:
-`kyara create-chrome-extensions [nome]` ou `kyara cce [nome]`
+- To know the current directory just type: **`kyara dir`**
 
-### Onde:
-`[nome]` é o nome do projeto.
+- You can get some information about your operating system by typing: **`kyara os`**
 
-## Para saber o diretório atual basta digitar:
-`kyara dir`
+- You can get your operating system's memory status by typing: **`kyara memory`** or **`kyara m`**
 
-## Você pode obter algumas informações do seu sistema operacional digitando:
-`kyara os`
+- You can install npm packages by typing: **`kyara add [package]`**
 
-## Você pode obter status da mémoria do seu sistema operacional digitando:
-`kyara memory` ou  `kyara m`
+- You can remove packages from npm by typing: **`kyara remove [package]`**
 
-## Você pode instalar pacotes do npm digitando:
-`kyara add [pacote]`
+- You can encrypt files by typing: **`kyara encrypt-files [file]`** or **`kyara ef [file]`**
 
-## Você pode remover pacotes do npm digitando:
-`kyara remove [pacote]`
+**Note**: Encrypted files will NOT be decrypted.
 
-## Você pode encriptar arquivos digitando:
-`kyara encrypt-files [arquivo]` ou `kyara ef [arquivo]` <br>
+- You can create files by typing: **`kyara generate [nome_arquivo]`** or **`kyara g [file]`**
 
-**Obs**: Os arquivos criptografados NÃO serão descriptografados.
-
-## Você pode criar arquivos digitando:
-`kyara generate [nome_arquivo]` ou `kyara g [nome_arquivo]`
-
-## Você pode visualizar o conteúdo de arquivos digitando:
-`kyara view [nome_arquivo]`
+- You can view the contents of files by typing: **`kyara view [file]`**
