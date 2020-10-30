@@ -1,43 +1,44 @@
 # CLI kyara 
 <img alt="License" src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue">
 
-## Requisítos
+## Requirements
 
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-## Tecnologias
+## Technology
 
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [gluegun](https://infinitered.github.io/gluegun/#/)
 
-## Projeto
+## Project
 
-kyara é uma CLI ( command line interface ) com o intuito de automatizar tarefas do meu dia a dia como desenvolvedor.
+kyara is a CLI (command line interface) in order to automate my daily tasks as a developer.
 
-## Ideias de implementação
+## Implementation ideas
 
-- [ ] Adicionar novos comandos.
-- [ ] Refatorar o código dos comandos já existentes.
+- [ ] Add new commands.
+- [ ] Refactor the code of the existing commands.
 
-## Instalação
+## Installation
 
 - **`npm install -g kyara`** ou **`yarn global add kyara`**;
 
-**Obs:** Eu recomendo que você instale de forma **GLOBAL**, assim você vai poder usar em qualquer lugar da sua máquina e o gluegun não da suporte a instalações para pastas específicas.
+**Note:** I recommend that you install **globally**, so you can use it anywhere on your machine and gluegun does not support installation for specific folders.
 
-## Comandos
-Para consultar a lista de comandos basta digitar **`kyara -h`** ou **`kyara --help`**. <br>
-Lista de comandos detalhada [aqui](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md)
+## Commands
 
-## Como contribuir
+To consult the list of commands just type **`kyara -h`** or **`kyara --help`**. <br>
+Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md)
 
-1. Faça um fork desse repositório;
-2. Cria uma branch com a sua feature: `git checkout -b minha-feature`;
-3. Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
-4. Faça push para a sua branch: `git push origin minha-feature`.
+## How to contribute
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+1. Fork this repository;
+2. Create a branch with your feature: `git checkout -b my-feature`;
+3. Commit your changes: `git commit -m 'feat: My new feature'`;
+4. Push to your branch: `git push origin my-feature`.
+
+After the merge of your pull request is done, you can delete your branch.
 
 ## Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
