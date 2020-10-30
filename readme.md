@@ -1,6 +1,5 @@
 # CLI kyara 
-<img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
-<img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue">
+<img alt="License" src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue">
 
 ## Requisítos
 
