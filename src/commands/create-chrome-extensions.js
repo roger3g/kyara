@@ -15,14 +15,13 @@ module.exports = {
     const path = join( process.cwd() , `/${projectName}` )
 
     if ( projectName == undefined ) {
-      print.error( 'Error, name has not been defined' )
-      return 
+      return print.error( 'Error, name has not been defined' )
     } else {
       mkdir( path , () => { return } )
       writeFileData ( path , 'content.js' , '' )
       writeFileData ( path , 'style.css' , '' )
       writeFileData ( path , 'manifest.json' , manifestData )
-      return
+      return print.success( 'Created project' )
     }
   }
 }

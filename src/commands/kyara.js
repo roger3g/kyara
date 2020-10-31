@@ -3,7 +3,7 @@ const command = {
   run: async toolbox => {
     const { print } = toolbox
     print.success( 'Welcome to kyara CLI' )
-    print.success( 'Access: https://github.com/Rogerluiz0/kyara for more details' )
+    print.success( 'Access: https://github.com/roger3g/kyara for more details' )
   }
 }
 

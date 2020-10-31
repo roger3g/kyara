@@ -12,8 +12,17 @@ module.exports = {
   alias: ['ef'],
   description: 'Encrypt specific files like ransomware ( No decryption! )',
   run: async toolbox => {
-    const { parameters } = toolbox
-    encryptFile( join(`${process.cwd()}/${parameters.first}`) ) 
+    const { parameters, print } = toolbox
+
+    const fileName = parameters.first
+    const path = join( process.cwd() , `/${fileName}` )
+
+    if ( fileName == undefined ) {
+      return print.error( 'Error, file not found' )
+    } else {
+      encryptFile( path )
+      return print.success( 'Done!' )
+    }
   }
 }
 

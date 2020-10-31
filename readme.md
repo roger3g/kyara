@@ -1,5 +1,5 @@
 # CLI kyara 
-<img alt="Version" src="https://img.shields.io/badge/author-roger3g-blue" style="display: inline;"> <img alt="Version" src="https://img.shields.io/badge/languages-1-blue" style="display: inline;"> <img alt="License" src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue" style="display: inline;">
+<img src="https://img.shields.io/badge/author-roger3g-blue" style="display: inline;"> <img src="https://img.shields.io/badge/languages-1-blue" style="display: inline;"> <img src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img src="https://img.shields.io/badge/version-0.0.8-blue" style="display: inline;">
 
 <div align="center">
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
@@ -45,4 +45,4 @@ After the merge of your pull request is done, you can delete your branch.
 
 ## License
 
-This project is under the MIT license. See the archive [LICENSE](LICENSE) for more details.
+This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.

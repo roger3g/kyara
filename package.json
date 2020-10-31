@@ -1,6 +1,6 @@
 {
   "name": "kyara",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "kyara CLI",
   "private": false,
   "bin": {
@@ -16,11 +16,22 @@
   },
   "files": [
     "src",
-    "LICENSE",
-    "readme.md",
+    "LICENSE.md",
+    "README.md",
     "docs",
-    "bin"
+    "bin",
+    ".github"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roger3g/kyara.git"
+  },
+  "keywords": ["cli", "gluegun", "cmd", "bash"],
+  "author": {
+    "name": "Roger luiz",
+    "email": "Rogerluiz010@gmail.com",
+    "url": "https://github.com/roger3g"
+  },
   "license": "MIT",
   "dependencies": {
     "gluegun": "latest"
