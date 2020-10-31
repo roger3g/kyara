@@ -25,7 +25,7 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 
 ## Installation
 
-- **`npm install -g kyara`** ou **`yarn global add kyara`**;
+- **`npm install -g kyara`** or **`yarn global add kyara`**;
 
 **Note:** I recommend that you install **globally**, so you can use it anywhere on your machine and gluegun does not support installation for specific folders.
 
