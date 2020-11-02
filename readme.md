@@ -5,14 +5,14 @@
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
 </div>
 
-📌 Table of Contents
+## 📌 Table of Contents
 
 - [Requirements](#-requirements)
 - [Technology](#-technology)
 - [Project](#-project)
 - [Implementation ideas](#-implementation-ideas)
 - [Installation](#-installation)
-- [Commands](#commands)
+- [Commands](#-commands)
 - [How to contribute](#-how-to-contribute)
 - [License](#-license)
 
