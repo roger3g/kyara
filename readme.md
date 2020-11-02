@@ -5,6 +5,18 @@
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
 </div>
 
+📌 Table of Contents
+
+- [Requirements](#-requirements)
+- [Technology](#-technology)
+- [Project](#-project)
+- [Implementation ideas](#-implementation-ideas)
+- [Installation](#-installation)
+- [Commands](#commands)
+- [How to contribute](#-how-to-contribute)
+- [License](#-license)
+
+
 ## ⚙ Requirements
 
 - [X] [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
@@ -29,7 +41,7 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 
 **Note:** I recommend that you install **globally**, so you can use it anywhere on your machine and gluegun does not support installation for specific folders.
 
-## Commands
+## 🆘 Commands
 
 To consult the list of commands just type **`kyara -h`** or **`kyara --help`**. <br>
 Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md)
