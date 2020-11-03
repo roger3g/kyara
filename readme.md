@@ -24,7 +24,7 @@
 ## 🕹 Technology
 
 - [x] [Node.js](https://nodejs.org/en/)
-- [x] [gluegun](https://infinitered.github.io/gluegun/#/)
+- [x] [Gluegun](https://infinitered.github.io/gluegun/#/)
 
 ## 💻 Project
 
