@@ -1,5 +1,5 @@
 # CLI kyara 
-<img src="https://img.shields.io/badge/author-roger3g-blue" style="display: inline;"> <img src="https://img.shields.io/badge/languages-1-blue" style="display: inline;"> <img src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img src="https://img.shields.io/badge/npm-0.0.8-blue" style="display: inline;"> <img src="https://img.shields.io/badge/platform-|-Windows-|-Mac-OS-|-linux-blue" style="display: inline;">
+<img src="https://img.shields.io/badge/author-roger3g-blue" style="display: inline;"> <img src="https://img.shields.io/badge/languages-1-blue" style="display: inline;"> <img src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img src="https://img.shields.io/badge/npm-0.0.8-blue" style="display: inline;"> <img src="https://img.shields.io/badge/platform-|Windows|MacOS|linux-blue" style="display: inline;">
 
 <div align="center">
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
