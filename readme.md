@@ -21,7 +21,7 @@
 
 - [X] [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-## 🕹 Technology
+## 🛠 Technology
 
 - [x] [Node.js](https://nodejs.org/en/)
 - [x] [Gluegun](https://infinitered.github.io/gluegun/#/)
@@ -37,7 +37,17 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 
 ## ⬇ Installation
 
-- **`npm install -g kyara`** or **`yarn global add kyara`**;
+Using npm:
+
+```bash
+$ npm install -g kyara
+```
+
+Using yarn:
+
+```bash
+$ yarn global add kyara
+```
 
 **Note:** I recommend that you install **globally**, so you can use it anywhere on your machine and gluegun does not support installation for specific folders.
 
