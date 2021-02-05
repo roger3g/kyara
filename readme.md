@@ -65,6 +65,8 @@ Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/doc
 
 After the merge of your pull request is done, you can delete your branch.
 
+You can report a bug [here](https://github.com/roger3g/kyara/issues).
+
 ## 📝 License
 
 This project is under the MIT license. See the archive [LICENSE](LICENSE.md) for more details.
