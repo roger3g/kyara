@@ -1,6 +1,8 @@
 # CLI kyara 
 <img src="https://img.shields.io/badge/author-roger3g-blue" style="display: inline;"> <img src="https://img.shields.io/badge/languages-1-blue" style="display: inline;"> <img src="https://img.shields.io/badge/license-MIT-blue" style="display: inline;"> <img src="https://img.shields.io/badge/npm-0.0.8-blue" style="display: inline;"> <img src="https://img.shields.io/badge/platform-Windows| MacOS | linux-blue" style="display: inline;"> <img src="https://img.shields.io/github/last-commit/roger3g/kyara?color=blue" style="display: inline;">
 
+<img src="https://img.shields.io/badge/author-roger3g-blue?style=for-the-badge" style="display: inline;"> <img src="https://img.shields.io/badge/languages-2-blue?style=for-the-badge" style="display: inline;"> <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" style="display: inline;"> <img src="https://img.shields.io/badge/npm-0.0.8-blue?style=for-the-badge" style="display: inline;"> <img src="https://img.shields.io/badge/platform-Windows%7C%20MacOS%20%7C%20linux-blue?style=for-the-badge" style="display: inline;"> 
+
 <div align="center">
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
 </div>
