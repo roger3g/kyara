@@ -5,18 +5,6 @@
   <img src=".github/print.png" alt="Print" style="width: 100%;">  
 </div>
 
-## 📌 Table of Contents
-
-- [Requirements](#-requirements)
-- [Technology](#-technology)
-- [Project](#-project)
-- [Implementation ideas](#-implementation-ideas)
-- [Installation](#-installation)
-- [Commands](#-commands)
-- [How to contribute](#-how-to-contribute)
-- [License](#-license)
-
-
 ## ⚙ Requirements
 
 - [X] [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
