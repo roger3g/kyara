@@ -11,8 +11,8 @@
 
 ## 🛠 Technology
 
-- [x] [Node.js](https://nodejs.org/en/)
-- [x] [Gluegun](https://infinitered.github.io/gluegun/#/)
+- [Node.js](https://nodejs.org/en/)
+- [Gluegun](https://infinitered.github.io/gluegun/#/)
 
 ## 💻 Project
 
@@ -20,7 +20,7 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 
 ## 💡 Implementation ideas
 
-- [ ] Add new commands.
+- [ ] Add new commands;
 - [ ] Refactor the code of the existing commands.
 
 ## ⬇ Installation
@@ -28,13 +28,13 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 Using npm:
 
 ```bash
-$ npm install -g kyara
+npm install -g kyara
 ```
 
 Using yarn:
 
 ```bash
-$ yarn global add kyara
+yarn global add kyara
 ```
 
 **Note:** I recommend that you install **globally**, so you can use it anywhere on your machine and gluegun does not support installation for specific folders.
@@ -42,7 +42,7 @@ $ yarn global add kyara
 ## 🆘 Commands
 
 To consult the list of commands just type **`kyara -h`** or **`kyara --help`**. <br>
-Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md)
+Detailed command list [here](https://github.com/Rogerluiz0/kyara/blob/master/docs/commands.md).
 
 ## 🤔 How to contribute
 
