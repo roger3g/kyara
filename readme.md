@@ -10,7 +10,8 @@
 
 ## ⚙ Requirements
 
-- [X] [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [X] [npm](https://www.npmjs.com/)
+- [X] [Node.js](https://nodejs.org/en/)
 
 ## 🛠 Technology
 
@@ -24,19 +25,20 @@ kyara is a CLI (command line interface) in order to automate my daily tasks as a
 ## 💡 Implementation ideas
 
 - [ ] Add new commands;
+- [ ] Fix the bugs;
 - [ ] Refactor the code of the existing commands.
 
 ## ⬇ Installation
 
 Using npm:
 
-```bash
+```console
 npm install -g kyara
 ```
 
 Using yarn:
 
-```bash
+```console
 yarn global add kyara
 ```
 
