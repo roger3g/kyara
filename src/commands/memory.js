@@ -1,5 +1,4 @@
-const os = require( 'os' )
-const { freemem , totalmem } = os
+const {freemem, totalmem} = require('os')
 
 module.exports = {
   name: 'memory',
@@ -8,13 +7,13 @@ module.exports = {
   run: async toolbox => {
     const { table } = toolbox.print
     
-    setInterval( () => {
-      const total = parseInt( totalmem() / 1024 / 1024 )
-      const mem = parseInt( freemem() / 1024 / 1024 )
-      const percents = parseInt( ( mem / total ) * 100 )
+    setInterval(() => {
+      const total = parseInt(totalmem() / 1024 / 1024)
+      const mem = parseInt(freemem() / 1024 / 1024)
+      const percents = parseInt((mem / total) * 100)
 
       console.clear()
-      console.log( '\n' )
+      console.log('\n')
 
       table(
         [
@@ -23,10 +22,10 @@ module.exports = {
           ['Free memory', `${mem} MB`],
           ['Memory in use', `${percents} %`]
         ],
-        { format: 'markdown' }
+        {format: 'markdown'}
         )
       
-      console.log( '\n|-  ^c To exit  -|' )
-    } , 1000 )
+      console.log('\n|-  ^c To exit  -|')
+    }, 1000)
   }
 }

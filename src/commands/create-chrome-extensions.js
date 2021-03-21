@@ -1,36 +1,30 @@
-const fs = require( 'fs' )
-const path = require( 'path' )
-
-const { mkdir , writeFile } = fs
-const { join } = path
+const { mkdir, writeFile } = require('fs')
+const { join } = require('path')
 
 module.exports = {
   name: 'create-chrome-extensions',
   alias: ['cce'],
   description: 'Create a base file structure for chrome extensions',
   run: async toolbox => {
-    const { print , parameters } = toolbox
+    const {print, parameters} = toolbox
     
     const projectName = parameters.first
-    const path = join( process.cwd() , `/${projectName}` )
+    const path = join(process.cwd(), `/${projectName}`)
 
-    if ( projectName == undefined ) {
-      return print.error( 'Error, name has not been defined' )
+    if (projectName == undefined) {
+      return print.error('Error, name has not been defined')
     } else {
-      mkdir( path , () => { return } )
-      writeFileData ( path , 'content.js' , '' )
-      writeFileData ( path , 'style.css' , '' )
-      writeFileData ( path , 'manifest.json' , manifestData )
-      return print.success( 'Created project' )
+      mkdir(path ,() => { return })
+      writeFileData(path, 'content.js', '')
+      writeFileData(path, 'style.css', '')
+      writeFileData(path, 'manifest.json', manifestData)
+      return print.success('Created project')
     }
   }
 }
 
-function writeFileData ( path , file , data ) {
-  writeFile( join( `${path}` , file ) , 
-  data , { enconding: 'utf-8', flag: 'w' } , () => {
-    return
-  } )
+function writeFileData(path, file , data) {
+  writeFile(join(`${path}`, file), data, {enconding: 'utf-8', flag: 'w'}, () => {return})
 }
 
 const manifestData = `{
@@ -40,22 +34,13 @@ const manifestData = `{
   "content_scripts": [
     {
       "matches": [
-        "https://www.exemplo1.com/", // em quais domínios nossa extenção vai rodar
-        "https://www.exemplo2.com/",
-        "https://www.exemplo3.com/",
-        "https://www.exemploN.com/"
+        "https://www.exemplo.com/" // em quais domínios nossa extenção vai rodar
       ], 
       "css": [
-        "style1.css", // nosso(s) arquivo(s) css
-        "style2.css",
-        "style3.css",
-        "styleN.css"
+        "style1.css" // nosso(s) arquivo(s) css
       ], 
       "js": [
-        "content1.js", // nosso(s) arquivo(s) javascript    
-        "content2.js",
-        "content3.js",
-        "contentN.js"
+        "content1.js" // nosso(s) arquivo(s) javascript    
       ]
     }
   ]
